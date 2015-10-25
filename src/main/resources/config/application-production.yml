@@ -4,4 +4,3 @@ spring:
     url: jdbc:mysql://localhost/production
     username: testuser
     password: testuser
-    driverClassName: com.mysql.jdbc.Driver

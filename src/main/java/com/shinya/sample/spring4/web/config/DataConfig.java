@@ -17,14 +17,13 @@ public class DataConfig {
 
 	@Bean
 	public SqlSessionFactory sqlSessionFactory(DataSource dataSource) throws Exception {
-		
+			
 		SqlSessionFactoryBean sessionFactory = new SqlSessionFactoryBean();
 		sessionFactory.setDataSource(dataSource);
 		sessionFactory.setFailFast(true);
 
-		// XMLƒtƒ@ƒCƒ‹”z’uêŠ‚ª@MapperScan‚ÌƒpƒX‚ÆˆÙ‚È‚é‚Ì‚Å•Ê“rİ’è
-		ResourcePatternResolver resolver = ResourcePatternUtils.getResourcePatternResolver(
-                new DefaultResourceLoader());
+		// XMLãƒ•ã‚¡ã‚¤ãƒ«é…ç½®å ´æ‰€ãŒ@MapperScanã®ãƒ‘ã‚¹ã¨ç•°ãªã‚‹ã®ã§åˆ¥é€”è¨­å®š
+		ResourcePatternResolver resolver = ResourcePatternUtils.getResourcePatternResolver(new DefaultResourceLoader());
 		sessionFactory.setMapperLocations(resolver.getResources("classpath:mapper/*.xml"));
 
 		return sessionFactory.getObject();

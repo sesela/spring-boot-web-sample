@@ -5,3 +5,4 @@ spring:
     username: testuser
     password: testuser
     driverClassName: com.mysql.jdbc.Driver
+    maximum-pool-size: 10
