@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration >
+  <context id="context1" >
+    <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/sample_board" userId="spitz" password="spitz" ></jdbcConnection>
+    <javaModelGenerator targetPackage="com.shinya.sample.spring4.web.model" targetProject="sample-securing-web" />
+    <sqlMapGenerator targetPackage="mapper" targetProject="sample-securing-web/src/main/resources" />
+    <javaClientGenerator targetPackage="com.shinya.sample.spring4.web.dao" targetProject="sample-securing-web" type="XMLMAPPER" />
+ 
+ 
+ <!--
+     自動生成対象のテーブル名を[tableName]に指定する。
+     ※テーブル名の指定はワイルドカードが利用できます
+ 
+     詳しい設定値については公式サイトのリファレンスを参照してください。
+     http://mybatis.github.io/generator/configreference/table.html
+ 
+     modelType :
+       modelType="flat"
+          ドメインクラスのみ作成。
+       modelType="hierarchical"
+          自動生成するMapperのパラメータの為にPrimary Keyエンティティを生成します。
+          MapperでPKを指定したクエリ(selectByPrimaryKey等)のパラメータがデフォルトでPrimary Keyエンティティになります。
+     -->
+    <table tableName="%"
+		    enableInsert="true"
+            enableSelectByPrimaryKey="true"
+            enableSelectByExample="true"
+            enableUpdateByPrimaryKey="true"
+            enableUpdateByExample="false"
+            enableDeleteByPrimaryKey="true"
+            enableDeleteByExample="false"
+            enableCountByExample="false"
+            selectByExampleQueryId="false"
+            modelType="flat" />
+  </context>
+</generatorConfiguration>

@@ -1,0 +1,7 @@
+spring:
+  profiles.active: staging
+  datasource:
+    url: jdbc:mysql://localhost/staging
+    username: testuser
+    password: testuser
+    driverClassName: com.mysql.jdbc.Driver
